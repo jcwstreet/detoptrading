@@ -245,7 +245,7 @@ a {
 }
 
 .main .discount_upt .type_count-25k {
-    min-width: 300px;
+    min-width: 325px;
     position: relative;
     display: grid;
     grid-template-rows: repeat(3, auto) 7fr;

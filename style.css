@@ -8,14 +8,15 @@ body {
 
     font-family: 'Roboto', sans-serif;
     font-size: 60%;
-   
+    width: 100%;
     min-width: 325px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
+    display: grid;  
+    justify-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
 }
 
 :root{
@@ -66,19 +67,16 @@ body {
     
 }
 .main {
-    padding: 12px;   
+    display: grid;
+    padding: 12px;
+    max-width: 600px;  
+   
 }
 
 .main .main_links {
     box-shadow: 0 0 30px var(--dark_shadow);
     padding: 12px;
-    border-radius: 16px;
-    min-width: 325px;
-    max-width: 600px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr;
-    
+    border-radius: 16px;  
 }
 
 .main .main_text-discover {
@@ -88,12 +86,8 @@ body {
 }
 
 .main .main_container_links-group{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 2fr) 1fr ;
     margin-top: 16px;
-    margin-bottom: 12px;
-    
+    margin-bottom: 12px;  
 }
 
 .main .main_container-invidual-link {
@@ -103,27 +97,21 @@ body {
     grid-template-areas: 
     'name image'
     'text image'
-    ;
-    
+    ;    
 }
 
 .main .main_container-invidual-link :nth-child(1) {
     font-size: 1.2rem;
     font-weight: bold;
     align-self: flex-end;
-    
-    
-
 }
 
 .main .main_container-invidual-link :nth-child(2){
     grid-area: image;
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 80px;
     object-fit: contain;
     object-position: center center;
-    
-
 }
 .main .main_container-invidual-link :nth-child(3) {
     font-size: 1rem;
@@ -139,9 +127,8 @@ body {
     justify-self: center;
     display: flex;
     align-items: center;
-    
-    
     color: var(--white);
+    justify-content: center;  
 }
 
 .main .main_links .main_links_discover a {
@@ -149,6 +136,7 @@ body {
     color: var(--white);
     font-size: 1rem;
     font-weight: bold;
+    
 }
 
 .discount_e2t {
@@ -157,7 +145,6 @@ body {
     border-radius: 16px;
     padding: 12px;
     height: auto;
-    min-width: 325px;
     display: grid;
     grid-template-columns: repeat(2, 1fr) ;
     grid-template-rows: auto auto auto;
@@ -167,7 +154,6 @@ body {
     'table1 table2' 
     ;
     gap: 8px;
-
 }
 
 .main .discount_e2t .title_count_e2t {
@@ -176,16 +162,12 @@ body {
     font-weight: bold;
     color: #EC661A;
     grid-area: title;
-    
-
-
 }
 
 .main .discount_e2t .description_short_e2t {
     font-size: 1rem;
     text-align: center;
     grid-area: description;
-    
 }
 
 .main .discount_e2t .content_type_count_e2t {
@@ -193,9 +175,6 @@ body {
     gap: 4px;
     grid-template-rows: repeat(7, 2fr );
     align-items: center;
-    
-
-
 }
 
 .main .discount_e2t .content_characteristic_e2t {
@@ -207,8 +186,6 @@ body {
     font-size: .6rem;
     padding: 4px;
     border-radius: 2px;
-    
-
 }
 
 .main .discount_e2t .dates_charecteristcs {
@@ -223,17 +200,17 @@ body {
     align-items: center;
     justify-items: center;
 }
-.main .discount_e2t .dates_charecteristcs :nth-child(1) {
+.main .discount_e2t .dates_charecteristcs .size_count_e2t{
     font-weight: bold;
     font-size: 1rem;
-
 }
 .main .discount_e2t .dates_charecteristcs p {
     padding: 4px;
 }
 
-.main .discount_e2t .dates_charecteristcs :nth-last-child(1) {
-    background-color: #EC661A;
+.main .discount_e2t .dates_charecteristcs strong {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 
@@ -243,19 +220,14 @@ body {
     border-radius: 4px;
     height: 100%;
     display: grid;
-    align-items: center;
-    
-    
-
-    
+    align-items: center; 
+    background-color: #EC661A;
 }
 
 .main .discount_e2t .dates_charecteristcs .link_e2t_content a {
     text-decoration: none;
     color: var(--white);
-    font-size: .9rem;
-
-    
+    font-size: .9rem;  
 }
 .main .discount_e2t .dates_charecteristcs .link_e2t_content:hover {
     box-shadow: 0 0 20px  #EC661A; 
@@ -266,26 +238,28 @@ body {
     box-shadow: 0 0 30px var(--dark_shadow);
     border-radius: 16px;
     padding: 12px;
-    height: auto;
-    min-width: 325px;
-    display: grid;
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    
 }
 
 .main .discount_upt .type_count-25k {
     min-width: 300px;
-    max-width: 350px;
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto) 7fr;
-    align-items: center;
-    width: 100%;
+    margin-top: 12px;
+    scroll-snap-align: center;
 }
 
 .main .discount_upt .type_count-25k .title_count_upt {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
-    align-self: flex-end;
+    align-self: flex-end;   
 }
 
 .main .discount_upt .type_count-25k .description_short_upt {
@@ -307,6 +281,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 16px;
     gap: 4px;
+    width: 100%;  
 }
 
 
@@ -314,20 +289,15 @@ body {
     display: grid;
     grid-template-rows: repeat(7, 2fr);
     align-items: center;
-    gap: 8px;
-    justify-content: center;
+    gap: 8px;   
 }
 
 .main .discount_upt .type_count-25k .description_count25k .content_type_count_upt .content_characteristic_upt{
-background-color:#002169 ;
-color: var(--white);
-padding: 4px;
-min-height: 25px;
-font-size: .7rem;
-border-radius: 2px;
-display: flex;
-align-items: center;
-
+    background-color:#002169 ;
+    color: var(--white);
+    padding: 6px;
+    font-size: .7rem;
+    border-radius: 2px;
 }
 
 .main .discount_upt .type_count-25k .description_count25k .dates_charecteristcs_upt {
@@ -338,5 +308,24 @@ align-items: center;
     font-size: .8rem;
     border: 1px solid #002169;
     border-radius: 8px;
+    border-bottom: none;
+}
 
+.main .discount_upt .type_count-25k .description_count25k .dates_charecteristcs_upt a {
+    text-decoration: none;
+    color: var(--white);
+    width: 100%;
+    height: 100%;
+    background-color: #002169;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 6px;
+}
+
+.main .discount_upt .type_count-25k .description_count25k .dates_charecteristcs_upt .link_upt_content:hover {
+    box-shadow: 0 0 20px #002169;
 }
